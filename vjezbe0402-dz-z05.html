@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>peti zadatak</title>
+</head>
+<body>
+
+  <form>
+    <label for="registracija">Unesite registarsku oznaku vozila u BiH:</label>
+    <input type="text" id="registracija">
+    <button type="button" onclick="validiraj()">Validacija</button>
+  </form>
+
+  <script>
+    function validiraj() 
+	{
+      var unos = document.getElementById('registracija').value.toUpperCase();
+      var regex = /^[A-ZČĆŠĐŽ]{2}\d{3}[A-ZČĆŠĐŽ]{2}$/;
+
+      if (regex.test(unos)) 
+	  {
+        alert('Ispravna registarska oznaka vozila.');
+        return true;
+      } else {
+        alert('Neispravna registarska oznaka vozila.');
+        return false;
+      }
+    }
+  </script>
+
+</body>
+</html>

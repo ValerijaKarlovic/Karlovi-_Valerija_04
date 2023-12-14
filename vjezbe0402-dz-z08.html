@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Osma zadaća</title>
+</head>
+<body>
+
+  <form>
+    <label for="broj1">operand1</label>
+    <input type="number" id="broj1"><br><br>
+
+    <label for="broj2">operand2</label>
+    <input type="number" id="broj2"><br><br>
+
+    <button onclick="zbrajanje()">+</button>
+    <button onclick="oduzimanje()">-</button>
+    <button onclick="mnozenje()">*</button>
+    <button onclick="dijeljenje()">/</button><br><br>
+
+    <button onclick="sinus()">sin</button>
+    <button onclick="kosinus()">cos</button>
+    <button onclick="tangens()">tan</button><br><br>
+
+    <button onclick="ln()">ln</button>
+    <button onclick="log()">log</button><br><br>
+
+    <button onclick="kvadrat()">^2</button>
+    <button onclick="kub()">^3</button>
+    <button onclick="potencija()">^n</button><br><br>
+  </form>
+
+  <script>
+    function zbrajanje() 
+	{
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      var broj2 = parseFloat(document.getElementById('broj2').value);
+      alert('Rezultat zbrajanja: ' + (broj1 + broj2));
+    }
+
+    function oduzimanje() 
+	{
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      var broj2 = parseFloat(document.getElementById('broj2').value);
+      alert('Rezultat oduzimanja: ' + (broj1 - broj2));
+    }
+
+    function mnozenje() 
+	{
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      var broj2 = parseFloat(document.getElementById('broj2').value);
+      alert('Rezultat množenja: ' + (broj1 * broj2));
+    }
+
+    function dijeljenje() 
+	{
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      var broj2 = parseFloat(document.getElementById('broj2').value);
+      if (broj2 !== 0) {
+        alert('Rezultat dijeljenja: ' + (broj1 / broj2));
+      } else {
+        alert('Dijeljenje s nulom nije moguće.');
+      }
+    }
+
+    function sinus() 
+	{
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      alert('Sinus broja: ' + Math.sin(broj1));
+    }
+
+    function kosinus() 
+	{
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      alert('Kosinus broja: ' + Math.cos(broj1));
+    }
+
+    function tangens() 
+	{
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      alert('Tangens broja: ' + Math.tan(broj1));
+    }
+
+    function ln() 
+	{
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      alert('Prirodni logaritam broja: ' + Math.log(broj1));
+    }
+
+    function log() 
+	{
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      alert('Logaritam po bazi 10 broja: ' + Math.log10(broj1));
+    }
+
+    function kvadrat() 
+	{
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      alert('Kvadrat broja: ' + Math.pow(broj1, 2));
+    }
+
+    function kub() 
+	{
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      alert('Kub broja: ' + Math.pow(broj1, 3));
+    }
+
+    function potencija() 
+	{
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      var broj2 = parseFloat(document.getElementById('broj2').value);
+      alert('Potencija broja: ' + Math.pow(broj1, broj2));
+    }
+  </script>
+
+</body>
+</html>

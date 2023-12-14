@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>sedmi zadatak</title>
+</head>
+<body>
+
+  <form>
+    Unesite dan: <input type="number" id="dan">
+    <br>
+    Unesite mjesec: <input type="number" id="mjesec">
+    <br>
+    Unesite godinu (npr. 1970): <input type="number" id="godina">
+    <br>
+    <button type="button" onclick="Godine()">Izračunaj</button>
+  </form>
+
+  <p id="rezultat"></p>
+
+  <script>
+    function Godine() 
+	{
+      var unosDan = parseInt(document.getElementById('dan').value);
+      var unosMjesec = parseInt(document.getElementById('mjesec').value);
+      var unosGodina = parseInt(document.getElementById('godina').value);
+
+      var trenutniDatum = new Date();
+      var trenutnaGodina = trenutniDatum.getYear() + 1900; 
+      var trenutniMjesec = trenutniDatum.getMonth() + 1; 
+
+      var godine = trenutnaGodina - unosGodina;
+
+      if (trenutniMjesec < unosMjesec || (trenutniMjesec === unosMjesec && trenutniDatum.getDate() < unosDan)) 
+	  {
+        godine--;
+      }
+
+      document.getElementById('rezultat').innerText = godine + ' godina';
+    }
+  </script>
+
+</body>
+</html>

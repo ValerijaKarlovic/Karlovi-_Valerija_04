@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+ 
+  <title>prvi zadatak</title>
+  <script>
+    function izracunaj() 
+	{
+      var Unos = prompt("Unesite brojeve (npr 1, 4, 16 ):", "");
+      
+      if (Unos !== null) 
+	  {
+        var brojevi = Unos.split(',');
+        
+        var zbroj = 0;
+        var produkt = 1;
+
+        for (var i = 0; i < brojevi.length; i++) 
+		{
+          var broj = parseFloat(brojevi[i]);
+          zbroj += broj;
+          produkt *= broj;
+        }
+
+        var aritmeticka_sredina = zbroj / brojevi.length;
+
+        var geometrijska_sredina = Math.pow(produkt, 1 / brojevi.length);
+
+        alert('Aritmetička sredina: ' + aritmeticka_sredina + '\nGeometrijska sredina: ' + geometrijska_sredina);
+      }
+    }
+    izracunaj(); 
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>deveti zadatak</title>
+  <style>
+    div
+	{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .lijevaSlika 
+	{
+      width: 150px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .desnaSlika 
+	{
+      width: 250px;
+      height: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <img id="pocetnaLijevaSlika" class="lijevaSlika" src="off-removebg-preview.png">
+    <img id="pocetnaDesnaSlika" class="desnaSlika" src="zarulja_off_2.png">
+  </div>
+
+  <script>
+    var pocetnaLijevaSlika = document.getElementById('pocetnaLijevaSlika');
+    var pocetnaDesnaSlika = document.getElementById('pocetnaDesnaSlika');
+
+    pocetnaLijevaSlika.addEventListener('click', function() 
+	{
+      var tempLijeva = pocetnaLijevaSlika.src;
+      var tempDesna = pocetnaDesnaSlika.src;
+
+      pocetnaLijevaSlika.src = 'on-removebg-preview.png';
+      pocetnaDesnaSlika.src = 'zarulja_on_2.png';
+
+      pocetnaLijevaSlika.addEventListener('click', function() 
+	  {
+        pocetnaLijevaSlika.src = tempLijeva;
+        pocetnaDesnaSlika.src = tempDesna;
+      });
+    });
+  </script>
+
+</body>
+</html>

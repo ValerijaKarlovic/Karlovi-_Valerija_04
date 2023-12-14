@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>sesti zadatak</title>
+</head>
+<body>
+
+  <div>
+    <label>X= </label>
+    <input type="number" id="x">
+    <br>
+    <label for="y">Y= </label>
+    <input type="number" id="y">
+    <br>
+    <button type="button" onclick="zbroji()">Zbroji</button>
+    <br>
+    <label for="rezultat">REZULTAT= </label>
+    <input type="text" id="rezultat" readonly>
+  </div>
+
+  <script>
+    function zbroji() 
+	{
+      var x = parseFloat(document.getElementById('x').value);
+      var y = parseFloat(document.getElementById('y').value);
+	  
+    var rezultat = x + y;
+
+      document.getElementById('rezultat').value = rezultat;
+    }
+  </script>
+
+</body>
+</html>

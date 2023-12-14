@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cetvrti zadatak</title>
+</head>
+<body>
+
+  <form>
+    <label for="ocjena">Unesite ocjenu (1-5): </label>
+    <input type="text" id="ocjena" onkeypress="Enter ()">
+  </form>
+
+  <script>
+    function Enter ()
+	{
+      if (event.keyCode === 13)
+	  {
+        var ocjena = document.getElementById('ocjena').value;
+
+        if (ocjena === '1') 
+		{
+          alert('1 - Nedovoljan');
+        } 
+		else if (ocjena === '2') 
+		{
+          alert('2 - Dovoljan');
+        } 
+		else if (ocjena === '3') 
+		{
+          alert('3 - Dobar');
+        }
+		else if (ocjena === '4') 
+		{
+          alert('4 - Vrlo dobar');
+        } 
+		else if (ocjena === '5') 
+		{
+          alert('5 - Odličan');
+        } 
+		else
+		{
+          alert('Unesite ocjenu od 1 do 5.');
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

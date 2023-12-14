@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drugi zadatak</title>
+  <style>
+    #boja_pozadine 
+	{
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function promijeni_pozadinu() 
+	{
+      var roza = ['#FFC0CB'];
+
+      var boja = roza[Math.floor(Math.random() * roza.length)];
+
+      document.body.style.backgroundColor = boja;
+      document.getElementById('boja_pozadine').innerText = boja;
+    }
+  </script>
+</head>
+<body>
+
+  <button onclick="promijeni_pozadinu()">Promijeni pozadinu</button>
+
+  <div id="boja_pozadine"></div>
+</body>
+</html>
